@@ -1,7 +1,5 @@
 # Core ML Bootcamp
 
-todo 
- - simplify (currently)
  
  # Links & Bibliography
  
