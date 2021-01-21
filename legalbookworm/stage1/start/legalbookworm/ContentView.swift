@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import PDFKit
 
 struct ContentView: View {
     // 1. instead of the whole document, let's save both text and pdf document seperately
-    @Binding var document: legalbookwormDocument
+    @Binding var pdf: PDFDocument
+    @Binding var text: String
+    
     
     // 2. TODO Define a question attribute for the question, want answered from the pdf
     // 3. TODO Define an answer attribute for the answer from the pdf text
@@ -26,6 +29,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         // 4. load the sample pdf "The Measure of A Property Challenge | The Legal Geeks.pdf"
         // 5. supply the appropiate attributes to the view
-        ContentView(document: .constant(legalbookwormDocument()))
+        ContentView(document: .constant(PDF()))
     }
 }

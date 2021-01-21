@@ -5,12 +5,13 @@ import SwiftUI
 @main
 struct legalbookwormApp: App {
     // bonus: lookup app, scene & window/document group
-    var body: some Scene {
-        DocumentGroup(newDocument: legalbookwormDocument()) { file in
-            // 1. supply the appropriate attributes from the PDF to the ContentView
-            ContentView(document: file.$document)
+
+        var body: some Scene {
+            DocumentGroup(viewing: PDF.self) { file in
+                ContentView(pdf: file.document.pdf, text: file.document.text)
+            }
         }
-    }
+
 }
 
 // 2. Add Cataclyst Mac Support
