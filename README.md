@@ -1,4 +1,4 @@
-# course1
+# Core ML Bootcamp
 
 todo 
  - simplify (currently)
