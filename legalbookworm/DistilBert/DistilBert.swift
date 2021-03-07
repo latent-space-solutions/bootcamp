@@ -22,17 +22,18 @@ class DistilBert {
         // return the best logit answer
         let maxModel = 512
         
-        let tokenizedDocument = TokenizedString(document)
+        let paragraphs = document.split(separator: "\n").map {$0.trimmingCharacters(in: .whitespacesAndNewlines) }
+            .filter {$0.count > 42} 
         let tokenizedQuestion = TokenizedString(question)
         
         // 1. Split document tokens in chunks of 512 tokens and create DisilBertInputs for each
         // Exampe if there are 1300 elements in tokenizedDocument, split the document in three DistilBertInputs, the first and second each have 512 toksens and the last has 276 tokens
         // tip: look up stride
-        let lastIndex = tokenizedDocument.tokenIDs.count - 1
         
-        let inputs = stride(from: 0, to: lastIndex, by: maxModel).compactMap { start -> DistilBertInput in
-            let stopIndex = min(lastIndex, start+maxModel)
-            let bertInput = DistilBertInput(document: tokenizedDocument, question: tokenizedQuestion, start: start, stop: stopIndex)
+        let inputs = paragraphs.map { paragraph -> DistilBertInput in
+            
+            let tokenizedDocument = TokenizedString(String(paragraph))
+            let bertInput = DistilBertInput(document: tokenizedDocument, question: tokenizedQuestion, start: 0, stop: tokenizedDocument.tokens.count - 1)
             return bertInput
         }
         
@@ -60,10 +61,11 @@ class DistilBert {
                     let modelInput = input.modelInput!
                     let prediction = try self.distilBertModel.prediction(input: modelInput)
                     let best = self.bestLogitsIndices(from: prediction, in: input.documentRange)!
-                    let documentTokens = tokenizedDocument.tokens
+                    let documentTokens = input.document.tokens
+                    
                     let answerStart = documentTokens[best.start + input.start].startIndex
                     let answerEnd = documentTokens[best.end + input.start].endIndex
-                    let answer = String(document[answerStart..<answerEnd])
+                    let answer = String(input.document.original[answerStart..<answerEnd])
                     let answerTuple =  (score: best.bestSum,  answer: answer)
                     answers.append(answerTuple)
                 } catch {
@@ -79,7 +81,10 @@ class DistilBert {
             return "Can't find any answer."
         }
         
-        return answer.answer
+        let answersUnpacked = answers.sorted(by: {$0.score > $1.score}).map({$0.answer}).joined(separator: " / ")
         
+        
+        //        return answer.answer
+        return answersUnpacked
     }
 }

@@ -19,8 +19,18 @@ struct ContentView: View {
     var body: some View {
         VStack {
             
-            PdfViewer(document: $pdf, selectedText: $answer)
-            
+            // TODO: Uncomment below line to use PDF preview
+            // PdfViewer(document: $pdf, selectedText: $answer)
+            HStack {
+                
+                
+                ScrollView{
+                    // replace Text by Texteditor for testing
+                    TextEditor(text: $text)
+                        .frame(minWidth: 150, minHeight: 20, maxHeight: .infinity, alignment: .leading)
+                }
+                
+            }
             HStack {
                 TextEditor(text: $question).padding(15)
                 Text(answer).padding(15).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)

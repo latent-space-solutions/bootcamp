@@ -344,7 +344,7 @@
 				CODE_SIGN_ENTITLEMENTS = legalbookworm/legalbookworm.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"legalbookworm/Preview Content\"";
-				DEVELOPMENT_TEAM = XJFD7E2FW9;
+				DEVELOPMENT_TEAM = 6BAJ7UPUP3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = legalbookworm/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -368,7 +368,7 @@
 				CODE_SIGN_ENTITLEMENTS = legalbookworm/legalbookworm.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"legalbookworm/Preview Content\"";
-				DEVELOPMENT_TEAM = XJFD7E2FW9;
+				DEVELOPMENT_TEAM = 6BAJ7UPUP3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = legalbookworm/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
