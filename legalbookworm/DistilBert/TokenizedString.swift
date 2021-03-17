@@ -29,7 +29,9 @@ struct TokenizedString {
     }
     
     
-    private static func wordTokens(from rawString: String) -> [Substring] {
+    public static func wordTokens(from rawString: String) -> [Substring] {
+        // Create Word Tokens
+        // Given a string, replace new lines with spaces and split on spaces
         let wordTokens = rawString.replacingOccurrences(of: "\n", with: " ").split(separator: " ")
         
         return wordTokens

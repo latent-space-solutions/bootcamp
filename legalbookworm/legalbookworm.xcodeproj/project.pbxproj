@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F827B4AB2602AF45002355EE /* legalbookwormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F827B4AA2602AF45002355EE /* legalbookwormTests.swift */; };
+		F827B4C92602B319002355EE /* TokenizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E3463125B5163C00107993 /* TokenizedString.swift */; };
+		F827B4CC2602B339002355EE /* Vocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E3462F25B5163C00107993 /* Vocabulary.swift */; };
 		F8C1D39C25B5DEBE00559961 /* PDFViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C1D39A25B5DEBE00559961 /* PDFViewRepresentable.swift */; };
 		F8C1D39D25B5DEBE00559961 /* PdfViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C1D39B25B5DEBE00559961 /* PdfViewer.swift */; };
 		F8E3460625B4F8C200107993 /* legalbookwormApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E3460525B4F8C200107993 /* legalbookwormApp.swift */; };
@@ -25,7 +28,20 @@
 		F8E3464525B5CF0200107993 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = F8E3464425B5CF0200107993 /* LICENSE.txt */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F827B4AD2602AF46002355EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8E345FA25B4F8C200107993 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8E3460125B4F8C200107993;
+			remoteInfo = legalbookworm;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		F827B4A82602AF45002355EE /* legalbookwormTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = legalbookwormTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F827B4AA2602AF45002355EE /* legalbookwormTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = legalbookwormTests.swift; sourceTree = "<group>"; };
+		F827B4AC2602AF45002355EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8C1D39A25B5DEBE00559961 /* PDFViewRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFViewRepresentable.swift; sourceTree = "<group>"; };
 		F8C1D39B25B5DEBE00559961 /* PdfViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PdfViewer.swift; sourceTree = "<group>"; };
 		F8E3460225B4F8C200107993 /* legalbookworm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = legalbookworm.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +64,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F827B4A52602AF45002355EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8E345FF25B4F8C200107993 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -58,6 +81,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F827B4A92602AF45002355EE /* legalbookwormTests */ = {
+			isa = PBXGroup;
+			children = (
+				F827B4AA2602AF45002355EE /* legalbookwormTests.swift */,
+				F827B4AC2602AF45002355EE /* Info.plist */,
+			);
+			path = legalbookwormTests;
+			sourceTree = "<group>";
+		};
 		F8C1D39925B5DE6600559961 /* PdfViewer */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +105,7 @@
 				F8E3462D25B5161700107993 /* DistilBert */,
 				F8E3460425B4F8C200107993 /* legalbookworm */,
 				F8E3461725B4FF0900107993 /* Samples */,
+				F827B4A92602AF45002355EE /* legalbookwormTests */,
 				F8E3460325B4F8C200107993 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				F8E3460225B4F8C200107993 /* legalbookworm.app */,
+				F827B4A82602AF45002355EE /* legalbookwormTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,6 +168,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F827B4A72602AF45002355EE /* legalbookwormTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F827B4B12602AF46002355EE /* Build configuration list for PBXNativeTarget "legalbookwormTests" */;
+			buildPhases = (
+				F827B4A42602AF45002355EE /* Sources */,
+				F827B4A52602AF45002355EE /* Frameworks */,
+				F827B4A62602AF45002355EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F827B4AE2602AF46002355EE /* PBXTargetDependency */,
+			);
+			name = legalbookwormTests;
+			productName = legalbookwormTests;
+			productReference = F827B4A82602AF45002355EE /* legalbookwormTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F8E3460125B4F8C200107993 /* legalbookworm */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8E3461325B4F8C300107993 /* Build configuration list for PBXNativeTarget "legalbookworm" */;
@@ -157,9 +209,13 @@
 		F8E345FA25B4F8C200107993 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1230;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
+					F827B4A72602AF45002355EE = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = F8E3460125B4F8C200107993;
+					};
 					F8E3460125B4F8C200107993 = {
 						CreatedOnToolsVersion = 12.3;
 					};
@@ -179,11 +235,19 @@
 			projectRoot = "";
 			targets = (
 				F8E3460125B4F8C200107993 /* legalbookworm */,
+				F827B4A72602AF45002355EE /* legalbookwormTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F827B4A62602AF45002355EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8E3460025B4F8C200107993 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -199,6 +263,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F827B4A42602AF45002355EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F827B4C92602B319002355EE /* TokenizedString.swift in Sources */,
+				F827B4AB2602AF45002355EE /* legalbookwormTests.swift in Sources */,
+				F827B4CC2602B339002355EE /* Vocabulary.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8E345FE25B4F8C200107993 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -219,7 +293,57 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		F827B4AE2602AF46002355EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8E3460125B4F8C200107993 /* legalbookworm */;
+			targetProxy = F827B4AD2602AF46002355EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		F827B4AF2602AF46002355EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJFD7E2FW9;
+				INFOPLIST_FILE = legalbookwormTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.latent-space-solutions.legalbookwormTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/legalbookworm.app/legalbookworm";
+			};
+			name = Debug;
+		};
+		F827B4B02602AF46002355EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJFD7E2FW9;
+				INFOPLIST_FILE = legalbookwormTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.latent-space-solutions.legalbookwormTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/legalbookworm.app/legalbookworm";
+			};
+			name = Release;
+		};
 		F8E3461125B4F8C300107993 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -344,7 +468,7 @@
 				CODE_SIGN_ENTITLEMENTS = legalbookworm/legalbookworm.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"legalbookworm/Preview Content\"";
-				DEVELOPMENT_TEAM = 6BAJ7UPUP3;
+				DEVELOPMENT_TEAM = XJFD7E2FW9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = legalbookworm/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -368,7 +492,7 @@
 				CODE_SIGN_ENTITLEMENTS = legalbookworm/legalbookworm.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"legalbookworm/Preview Content\"";
-				DEVELOPMENT_TEAM = 6BAJ7UPUP3;
+				DEVELOPMENT_TEAM = XJFD7E2FW9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = legalbookworm/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -387,6 +511,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F827B4B12602AF46002355EE /* Build configuration list for PBXNativeTarget "legalbookwormTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F827B4AF2602AF46002355EE /* Debug */,
+				F827B4B02602AF46002355EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F8E345FD25B4F8C200107993 /* Build configuration list for PBXProject "legalbookworm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
