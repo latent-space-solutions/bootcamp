@@ -20,19 +20,22 @@ class DistilBert {
         // use prediciton on distilbert model
         // use Distilbert Output to find best logit combination
         // return the best logit answer
-        let maxModel = 512
         
-        let paragraphs = document.split(separator: "\n").map {$0.trimmingCharacters(in: .whitespacesAndNewlines) }
-            .filter {$0.count > 42} 
-        let tokenizedQuestion = TokenizedString(question)
+        // .map {$0.trimmingCharacters(in: .whitespacesAndNewlines) }
+        let paragraphs = (document.split(separator: "\n"))
+        let paragraphsFiltered = paragraphs.filter {$0.count > 42}
+        let tokenizedQuestion = TokenizedString(Substring(question))
         
         // 1. Split document tokens in chunks of 512 tokens and create DisilBertInputs for each
         // Exampe if there are 1300 elements in tokenizedDocument, split the document in three DistilBertInputs, the first and second each have 512 toksens and the last has 276 tokens
         // tip: look up stride
         
-        let inputs = paragraphs.map { paragraph -> DistilBertInput in
+        let inputs = paragraphsFiltered.compactMap { paragraph -> DistilBertInput? in
             
-            let tokenizedDocument = TokenizedString(String(paragraph))
+            let tokenizedDocument = TokenizedString(paragraph)
+            if tokenizedDocument.tokens.count == 0 {
+                return nil
+            }
             let bertInput = DistilBertInput(document: tokenizedDocument, question: tokenizedQuestion, start: 0, stop: tokenizedDocument.tokens.count - 1)
             return bertInput
         }

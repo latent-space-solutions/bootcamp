@@ -11,11 +11,11 @@ struct TokenizedString {
     private let _tokens: [Substring]
     private let _tokenIDs: [Int]
     
-    let original: String
+    let original: Substring
     public var tokens: [Substring] { return _tokens }
     public var tokenIDs: [Int] { return _tokenIDs }
     
-    init(_ string: String) {
+    init(_ string: Substring) {
         original = string
         
         let result = TokenizedString.tokenize(string)
@@ -23,17 +23,17 @@ struct TokenizedString {
         _tokenIDs = result.tokenIDs
     }
     
-    private static func tokenize(_ string: String) -> (tokens: [Substring], tokenIDs: [Int]) {
+    private static func tokenize(_ string: Substring) -> (tokens: [Substring], tokenIDs: [Int]) {
         let tokens = wordTokens(from: string)
         return wordpieceTokens(from: tokens)
     }
     
     
-    public static func wordTokens(from rawString: String) -> [Substring] {
+    public static func wordTokens(from rawString: Substring) -> [Substring] {
         // Create Word Tokens
         // Given a string, replace new lines with spaces and split on spaces
-        let wordTokens = rawString.replacingOccurrences(of: "\n", with: " ").split(separator: " ")
-        
+        //let wordTokens = rawString.replacingOccurrences(of: "\n", with: " ").split(separator: " ")
+        let wordTokens = rawString.split(whereSeparator: {[" ", "\n"].contains($0)})
         return wordTokens
     }
     
