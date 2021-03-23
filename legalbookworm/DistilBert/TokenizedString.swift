@@ -29,6 +29,7 @@ struct TokenizedString {
     }
     
     
+    // TODO: Make private again, but testable
     public static func wordTokens(from rawString: Substring) -> [Substring] {
         // Create Word Tokens
         // Given a string, replace new lines with spaces and split on spaces
@@ -37,8 +38,8 @@ struct TokenizedString {
         return wordTokens
     }
     
-    
-    private static func wordpieceTokens(from wordTokens: [Substring]) -> (tokens: [Substring], tokenIDs: [Int]) {
+    // TODO: Make private again, but testable
+    public static func wordpieceTokens(from wordTokens: [Substring]) -> (tokens: [Substring], tokenIDs: [Int]) {
         // Example: Spiderman
         // 1 - perform a dictionary lookup until an entry was found by successively dropping the last charcter
         // 1a. look up Spiderman in the dictionary => not found

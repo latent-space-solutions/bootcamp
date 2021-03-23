@@ -35,22 +35,63 @@ extension DistilBert {
         let startLogits = Array(UnsafeBufferPointer(start: startPtr, count: prediction.Identity_1.count))
         
         
-        let startLogitsOfDoc = [Float32](startLogits[range])
-        let endLogitsOfDoc = [Float32](endLogits[range])
+        let startLogitsOfDoc = [Float32](startLogits)
+        let endLogitsOfDoc = [Float32](endLogits)
         
-        let topStartIndices = startLogitsOfDoc.indicesOfLargest(20)
-        let topEndIndices = endLogitsOfDoc.indicesOfLargest(20)
         
-        let bestPair = findBestLogitPair(startLogits: startLogitsOfDoc,
-                                         bestStartIndices: topStartIndices,
-                                         endLogits: endLogitsOfDoc,
-                                         bestEndIndices: topEndIndices)
+        let bestPair = findMaxLogitPair(startLogits: startLogitsOfDoc,
+                                         endLogits: endLogitsOfDoc)
+        
+        
+//        let startLogitsOfDoc = [Float32](startLogits[range])
+//        let endLogitsOfDoc = [Float32](endLogits[range])
+//
+//        let topStartIndices = startLogitsOfDoc.indicesOfLargest(20)
+//        let topEndIndices = endLogitsOfDoc.indicesOfLargest(20)
+//
+//        let bestPair = findBestLogitPair(startLogits: startLogitsOfDoc,
+//                                         bestStartIndices: topStartIndices,
+//                                         endLogits: endLogitsOfDoc,
+//                                         bestEndIndices: topEndIndices)
         
         guard bestPair.start >= 0 && bestPair.end >= 0 else {
             return nil
         }
         
         return bestPair
+    }
+    
+    func findMaxLogitPair(startLogits: [Float32],
+                           endLogits: [Float32]) -> (start: Int, end: Int, bestSum: Float32) {
+        
+        // Find the max logit for start and end of the answer
+        var bestStartIndex: Int = -1
+        var bestStartValue: Float = -1
+        
+        for index in startLogits.indices {
+            let value = startLogits[index]
+            
+            if value > bestStartValue {
+                bestStartValue = value
+                bestStartIndex = index
+            }
+        }
+        
+        var bestEndIndex: Int = -1
+        var bestEndValue: Float = -1
+        
+        for index in endLogits.indices {
+            let value = endLogits[index]
+            
+            if value > bestEndValue {
+                bestEndValue = value
+                bestEndIndex = index
+            }
+        }
+        
+        let sum = bestStartValue + bestEndValue
+        
+        return (bestStartIndex, bestEndIndex, sum)
     }
     
     func findBestLogitPair(startLogits: [Float32],
@@ -77,7 +118,7 @@ extension DistilBert {
                 }
             }
         }
-        return (bestStart, bestEnd, bestSum)
         
+        return (bestStart, bestEnd, bestSum)
     }
 }

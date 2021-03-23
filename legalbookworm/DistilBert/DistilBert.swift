@@ -80,14 +80,13 @@ class DistilBert {
         tasks.wait()
         
         // 5. Sort answers by score and get the best one, return it
-        guard let answer = answers.sorted(by: {$0.score > $1.score}).first else {
+        guard let answer = answers.sorted(by: {$0.score > $1.score}).map({$0.answer}).first else {
             return "Can't find any answer."
         }
         
-        let answersUnpacked = answers.sorted(by: {$0.score > $1.score}).map({$0.answer}).joined(separator: " / ")
+        // HINT: Uncomment the following line to display all answers collected across alls paragprahs processed
+        // let answer = answers.sorted(by: {$0.score > $1.score}).map({$0.answer}).joined(separator: " / ")
         
-        
-        //        return answer.answer
-        return answersUnpacked
+        return answer
     }
 }
