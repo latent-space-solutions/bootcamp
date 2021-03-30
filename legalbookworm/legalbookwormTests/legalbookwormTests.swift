@@ -23,7 +23,11 @@ class legalbookwormTests: XCTestCase {
         let wordToBeTokenized = [Substring("Spiderman")]
 
         let actual = TokenizedString.wordpieceTokens(from: wordToBeTokenized)
-        let expected = ([Substring("Spider"), Substring("man")], [8454, 1399])
+        
+        // please replace the tokenids with the ones you figured out from the vocab-distilbert.txt
+        let correctSubstrings = [Substring("REPLACE"), Substring("ME")]
+        let correctTokenIds = [0,0]
+        let expected = (correctSubstrings, correctTokenIds)
         
         let equal = actual == expected
         XCTAssertTrue(equal)
@@ -33,21 +37,29 @@ class legalbookwormTests: XCTestCase {
         let wordToBeTokenized = [Substring("Lasercat")]
 
         let actual = TokenizedString.wordpieceTokens(from: wordToBeTokenized)
-        let expected = ([Substring("Las"), Substring("er"), Substring("cat")], [5976, 1200, 12650])
+        
+        let correctSubstrings = [Substring("PLEASE"), Substring("REPLACE"), Substring("ME")]
+        let correctTokenIds = [0,0,0]
+        
+        let expected = (correctSubstrings, correctTokenIds)
         
         let equal = actual == expected
         XCTAssertTrue(equal)
     }
     
     func testTokenizedStringYourName() throws {
+        
+        // Please replace "Till Lohfink" with your own name!
         let wordToBeTokenized = Substring("Till Lohfink")
         
         let wordTokens = TokenizedString.wordTokens(from: wordToBeTokenized)
         let actual = TokenizedString.wordpieceTokens(from: wordTokens)
         print(actual)
 
+        let correctSubstrings = [Substring("Till"), Substring("Lo"), Substring("h"), Substring("fin"), Substring("k")]
+        let correctTokenIds = [22430, 10605, 1324, 16598, 1377]
         
-        let expected = ([Substring("Till"), Substring("Lo"), Substring("h"), Substring("fin"), Substring("k")], [22430, 10605, 1324, 16598, 1377])
+        let expected = (correctSubstrings, correctTokenIds)
         
         let equal = actual == expected
         XCTAssertTrue(equal)

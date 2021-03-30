@@ -28,14 +28,12 @@ struct TokenizedString {
         return wordpieceTokens(from: tokens)
     }
     
-    
-    // TODO: Make private again, but testable
     public static func wordTokens(from rawString: Substring) -> [Substring] {
         // Create Word Tokens
         // Given a string, replace new lines with spaces and split on spaces
-        //let wordTokens = rawString.replacingOccurrences(of: "\n", with: " ").split(separator: " ")
-        let wordTokens = rawString.split(whereSeparator: {[" ", "\n"].contains($0)})
-        return wordTokens
+        let tokens = [Substring("Replace"), Substring("me")]
+
+        return tokens
     }
     
     // TODO: Make private again, but testable

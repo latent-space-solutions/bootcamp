@@ -16,7 +16,7 @@ extension MLMultiArray {
         // Bind the underlying `dataPointer` memory to make a native swift `Array<Double>`
         let unsafeMutablePointer = dataPointer.bindMemory(to: Double.self, capacity: count)
         let unsafeBufferPointer = UnsafeBufferPointer(start: unsafeMutablePointer, count: count)
-        return [Double](unsafeBufferPointer)
+        return Array<Double>(unsafeBufferPointer)
     }
 }
 
@@ -34,62 +34,52 @@ extension DistilBert {
         let startPtr = prediction.Identity_1.dataPointer.bindMemory(to: Float32.self, capacity: prediction.Identity_1.count)
         let startLogits = Array(UnsafeBufferPointer(start: startPtr, count: prediction.Identity_1.count))
         
-        
-        let startLogitsOfDoc = [Float32](startLogits)
-        let endLogitsOfDoc = [Float32](endLogits)
-        
-        
-        let bestPair = findMaxLogitPair(startLogits: startLogitsOfDoc,
-                                         endLogits: endLogitsOfDoc)
-        
-        
-//        let startLogitsOfDoc = [Float32](startLogits[range])
-//        let endLogitsOfDoc = [Float32](endLogits[range])
 //
-//        let topStartIndices = startLogitsOfDoc.indicesOfLargest(20)
-//        let topEndIndices = endLogitsOfDoc.indicesOfLargest(20)
+//        let startLogitsOfDoc = [Float32](startLogits)
+//        let endLogitsOfDoc = [Float32](endLogits)
 //
+//
+
+        
+        let startLogitsOfDoc = [Float32](startLogits[range])
+        let endLogitsOfDoc = [Float32](endLogits[range])
+
+        let topStartIndices = startLogitsOfDoc.indicesOfLargest(20)
+        let topEndIndices = endLogitsOfDoc.indicesOfLargest(20)
+
 //        let bestPair = findBestLogitPair(startLogits: startLogitsOfDoc,
 //                                         bestStartIndices: topStartIndices,
 //                                         endLogits: endLogitsOfDoc,
 //                                         bestEndIndices: topEndIndices)
+//\
+
+        let bestPair = findMaxLogitPair(startLogits: startLogitsOfDoc,
+                                                 endLogits: endLogitsOfDoc)
         
         guard bestPair.start >= 0 && bestPair.end >= 0 else {
             return nil
         }
-        
+
         return bestPair
     }
     
     func findMaxLogitPair(startLogits: [Float32],
                            endLogits: [Float32]) -> (start: Int, end: Int, bestSum: Float32) {
         
-        // Find the max logit for start and end of the answer
-        var bestStartIndex: Int = -1
-        var bestStartValue: Float = -1
+        var bestStartIndex = 0
+        var bestEndIndex = 0
+        var sum: Float = 1
         
-        for index in startLogits.indices {
-            let value = startLogits[index]
-            
-            if value > bestStartValue {
-                bestStartValue = value
-                bestStartIndex = index
-            }
-        }
+        // iterate throught all start logits
+        // find the max value and index of the start logits
+        // set betsStartIndex to the max value's index
         
-        var bestEndIndex: Int = -1
-        var bestEndValue: Float = -1
+        // iterate throught all end logits
+        // find the max value and index of the start logits
+        // set betsStartIndex to the max value's index
         
-        for index in endLogits.indices {
-            let value = endLogits[index]
-            
-            if value > bestEndValue {
-                bestEndValue = value
-                bestEndIndex = index
-            }
-        }
-        
-        let sum = bestStartValue + bestEndValue
+        // add up the max value of the start logits and the max value of the endlogits
+        // save this value in sum
         
         return (bestStartIndex, bestEndIndex, sum)
     }
