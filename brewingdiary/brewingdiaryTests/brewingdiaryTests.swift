@@ -29,22 +29,31 @@ class brewingdiaryTests: XCTestCase {
     }
     
     func getFeaturePrint(image: UIImage) -> VNFeaturePrintObservation {
-        let requestHandler = VNImageRequestHandler(cgImage: image.cgImage!,  options: [:])
-        let request = VNGenerateImageFeaturePrintRequest()
-        try! requestHandler.perform([request])
-        let featurePrint = request.results!.first as! VNFeaturePrintObservation
+        // create a request handler
+        // VNImageRequestHandler(cgImage: REPLACE_WITH_CGIMAGE_FROM_UIImage,  options: [:])
+
+        
+        // create a VNGenerateImageFeaturePrintRequest()
+        
+        // use the perform method on your request handler to send off the request you just created
+        // try! YOUR_HANDLER.perform([YOUR_REQUEST])
+        
+        // the results are in request.results
+        // get the first result
+        // and cast it as! VNFeaturePrintObservation
+        let featurePrint: VNFeaturePrintObservation = VNFeaturePrintObservation()
         return featurePrint
     }
     
     func dot(a: [Float], b:[Float]) -> Float {
         var result: Float = 0
         
-        for dim in 0..<a.count {
-            result += a[dim] * b[dim]
-        }
-        // vDSP.dot(a, b)
-        // result = zip(a,b).map({$0 * $1}).reduce(0, +)
-        
+        // iterate throught the float array a
+        // Multiply the corresponding numbers of the arrays i.e. a[0] * b[0], a[1] * b[1], …
+        // sum up up the results in result
+        // Assume a=[3,5,2] and b=[7,3,3], then it should
+        // 3*7 + 5*3 + 2*3 = 21 + 15 + 6 = 42
+
         return result
     }
     func testDot() {
@@ -56,8 +65,13 @@ class brewingdiaryTests: XCTestCase {
     }
     
     func l2norm(a: [Float]) -> Float {
-        let squareSum = dot(a: a, b: a)
-        let squareRoot = sqrt(squareSum)
+        
+        // create a squareSum variable
+        // use your dot function to dot product a with itself
+        // dot with paramaters a and a
+        
+        // return the squareroot of the squareSum
+        let squareRoot: Float = 17.01
         
         return squareRoot
     }
