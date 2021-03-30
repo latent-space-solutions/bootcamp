@@ -1,0 +1,544 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F827B4AB2602AF45002355EE /* legalbookwormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F827B4AA2602AF45002355EE /* legalbookwormTests.swift */; };
+		F827B4C92602B319002355EE /* TokenizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E3463125B5163C00107993 /* TokenizedString.swift */; };
+		F827B4CC2602B339002355EE /* Vocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E3462F25B5163C00107993 /* Vocabulary.swift */; };
+		F8C1D39C25B5DEBE00559961 /* PDFViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C1D39A25B5DEBE00559961 /* PDFViewRepresentable.swift */; };
+		F8C1D39D25B5DEBE00559961 /* PdfViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C1D39B25B5DEBE00559961 /* PdfViewer.swift */; };
+		F8E3460625B4F8C200107993 /* legalbookwormApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E3460525B4F8C200107993 /* legalbookwormApp.swift */; };
+		F8E3460825B4F8C300107993 /* PDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E3460725B4F8C300107993 /* PDF.swift */; };
+		F8E3460A25B4F8C300107993 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E3460925B4F8C300107993 /* ContentView.swift */; };
+		F8E3460C25B4F8C300107993 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8E3460B25B4F8C300107993 /* Assets.xcassets */; };
+		F8E3460F25B4F8C300107993 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8E3460E25B4F8C300107993 /* Preview Assets.xcassets */; };
+		F8E3461925B4FF4000107993 /* The Measure of A Property Challenge | The Legal Geeks.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F8E3461825B4FF4000107993 /* The Measure of A Property Challenge | The Legal Geeks.pdf */; };
+		F8E3463525B5163C00107993 /* distilbert-qa.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F8E3462E25B5163C00107993 /* distilbert-qa.mlmodel */; };
+		F8E3463625B5163C00107993 /* Vocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E3462F25B5163C00107993 /* Vocabulary.swift */; };
+		F8E3463725B5163C00107993 /* vocab-distilbert.txt in Resources */ = {isa = PBXBuildFile; fileRef = F8E3463025B5163C00107993 /* vocab-distilbert.txt */; };
+		F8E3463825B5163C00107993 /* TokenizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E3463125B5163C00107993 /* TokenizedString.swift */; };
+		F8E3463925B5163C00107993 /* DistilBert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E3463225B5163C00107993 /* DistilBert.swift */; };
+		F8E3463A25B5163C00107993 /* DistilBertOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E3463325B5163C00107993 /* DistilBertOutput.swift */; };
+		F8E3463B25B5163C00107993 /* DistilBertInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E3463425B5163C00107993 /* DistilBertInput.swift */; };
+		F8E3464525B5CF0200107993 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = F8E3464425B5CF0200107993 /* LICENSE.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F827B4AD2602AF46002355EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8E345FA25B4F8C200107993 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8E3460125B4F8C200107993;
+			remoteInfo = legalbookworm;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F827B4A82602AF45002355EE /* legalbookwormTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = legalbookwormTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F827B4AA2602AF45002355EE /* legalbookwormTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = legalbookwormTests.swift; sourceTree = "<group>"; };
+		F827B4AC2602AF45002355EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8C1D39A25B5DEBE00559961 /* PDFViewRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFViewRepresentable.swift; sourceTree = "<group>"; };
+		F8C1D39B25B5DEBE00559961 /* PdfViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PdfViewer.swift; sourceTree = "<group>"; };
+		F8E3460225B4F8C200107993 /* legalbookworm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = legalbookworm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8E3460525B4F8C200107993 /* legalbookwormApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = legalbookwormApp.swift; sourceTree = "<group>"; };
+		F8E3460725B4F8C300107993 /* PDF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDF.swift; sourceTree = "<group>"; };
+		F8E3460925B4F8C300107993 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F8E3460B25B4F8C300107993 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F8E3460E25B4F8C300107993 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F8E3461025B4F8C300107993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8E3461825B4FF4000107993 /* The Measure of A Property Challenge | The Legal Geeks.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "The Measure of A Property Challenge | The Legal Geeks.pdf"; sourceTree = "<group>"; };
+		F8E3462625B505D500107993 /* legalbookworm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = legalbookworm.entitlements; sourceTree = "<group>"; };
+		F8E3462E25B5163C00107993 /* distilbert-qa.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "distilbert-qa.mlmodel"; sourceTree = "<group>"; };
+		F8E3462F25B5163C00107993 /* Vocabulary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vocabulary.swift; sourceTree = "<group>"; };
+		F8E3463025B5163C00107993 /* vocab-distilbert.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "vocab-distilbert.txt"; sourceTree = "<group>"; };
+		F8E3463125B5163C00107993 /* TokenizedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenizedString.swift; sourceTree = "<group>"; };
+		F8E3463225B5163C00107993 /* DistilBert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistilBert.swift; sourceTree = "<group>"; };
+		F8E3463325B5163C00107993 /* DistilBertOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistilBertOutput.swift; sourceTree = "<group>"; };
+		F8E3463425B5163C00107993 /* DistilBertInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistilBertInput.swift; sourceTree = "<group>"; };
+		F8E3464425B5CF0200107993 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F827B4A52602AF45002355EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8E345FF25B4F8C200107993 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F827B4A92602AF45002355EE /* legalbookwormTests */ = {
+			isa = PBXGroup;
+			children = (
+				F827B4AA2602AF45002355EE /* legalbookwormTests.swift */,
+				F827B4AC2602AF45002355EE /* Info.plist */,
+			);
+			path = legalbookwormTests;
+			sourceTree = "<group>";
+		};
+		F8C1D39925B5DE6600559961 /* PdfViewer */ = {
+			isa = PBXGroup;
+			children = (
+				F8C1D39B25B5DEBE00559961 /* PdfViewer.swift */,
+				F8C1D39A25B5DEBE00559961 /* PDFViewRepresentable.swift */,
+			);
+			path = PdfViewer;
+			sourceTree = "<group>";
+		};
+		F8E345F925B4F8C200107993 = {
+			isa = PBXGroup;
+			children = (
+				F8E3462D25B5161700107993 /* DistilBert */,
+				F8E3460425B4F8C200107993 /* legalbookworm */,
+				F8E3461725B4FF0900107993 /* Samples */,
+				F827B4A92602AF45002355EE /* legalbookwormTests */,
+				F8E3460325B4F8C200107993 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F8E3460325B4F8C200107993 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8E3460225B4F8C200107993 /* legalbookworm.app */,
+				F827B4A82602AF45002355EE /* legalbookwormTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8E3460425B4F8C200107993 /* legalbookworm */ = {
+			isa = PBXGroup;
+			children = (
+				F8C1D39925B5DE6600559961 /* PdfViewer */,
+				F8E3462625B505D500107993 /* legalbookworm.entitlements */,
+				F8E3460525B4F8C200107993 /* legalbookwormApp.swift */,
+				F8E3460725B4F8C300107993 /* PDF.swift */,
+				F8E3460925B4F8C300107993 /* ContentView.swift */,
+				F8E3461025B4F8C300107993 /* Info.plist */,
+				F8E3460B25B4F8C300107993 /* Assets.xcassets */,
+				F8E3460D25B4F8C300107993 /* Preview Content */,
+			);
+			path = legalbookworm;
+			sourceTree = "<group>";
+		};
+		F8E3460D25B4F8C300107993 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F8E3460E25B4F8C300107993 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F8E3461725B4FF0900107993 /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				F8E3461825B4FF4000107993 /* The Measure of A Property Challenge | The Legal Geeks.pdf */,
+			);
+			path = Samples;
+			sourceTree = "<group>";
+		};
+		F8E3462D25B5161700107993 /* DistilBert */ = {
+			isa = PBXGroup;
+			children = (
+				F8E3463225B5163C00107993 /* DistilBert.swift */,
+				F8E3463425B5163C00107993 /* DistilBertInput.swift */,
+				F8E3463325B5163C00107993 /* DistilBertOutput.swift */,
+				F8E3462F25B5163C00107993 /* Vocabulary.swift */,
+				F8E3462E25B5163C00107993 /* distilbert-qa.mlmodel */,
+				F8E3463125B5163C00107993 /* TokenizedString.swift */,
+				F8E3463025B5163C00107993 /* vocab-distilbert.txt */,
+				F8E3464425B5CF0200107993 /* LICENSE.txt */,
+			);
+			path = DistilBert;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F827B4A72602AF45002355EE /* legalbookwormTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F827B4B12602AF46002355EE /* Build configuration list for PBXNativeTarget "legalbookwormTests" */;
+			buildPhases = (
+				F827B4A42602AF45002355EE /* Sources */,
+				F827B4A52602AF45002355EE /* Frameworks */,
+				F827B4A62602AF45002355EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F827B4AE2602AF46002355EE /* PBXTargetDependency */,
+			);
+			name = legalbookwormTests;
+			productName = legalbookwormTests;
+			productReference = F827B4A82602AF45002355EE /* legalbookwormTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F8E3460125B4F8C200107993 /* legalbookworm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8E3461325B4F8C300107993 /* Build configuration list for PBXNativeTarget "legalbookworm" */;
+			buildPhases = (
+				F8E345FE25B4F8C200107993 /* Sources */,
+				F8E345FF25B4F8C200107993 /* Frameworks */,
+				F8E3460025B4F8C200107993 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = legalbookworm;
+			productName = legalbookworm;
+			productReference = F8E3460225B4F8C200107993 /* legalbookworm.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8E345FA25B4F8C200107993 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					F827B4A72602AF45002355EE = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = F8E3460125B4F8C200107993;
+					};
+					F8E3460125B4F8C200107993 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = F8E345FD25B4F8C200107993 /* Build configuration list for PBXProject "legalbookworm" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F8E345F925B4F8C200107993;
+			productRefGroup = F8E3460325B4F8C200107993 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8E3460125B4F8C200107993 /* legalbookworm */,
+				F827B4A72602AF45002355EE /* legalbookwormTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F827B4A62602AF45002355EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8E3460025B4F8C200107993 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8E3463725B5163C00107993 /* vocab-distilbert.txt in Resources */,
+				F8E3460F25B4F8C300107993 /* Preview Assets.xcassets in Resources */,
+				F8E3461925B4FF4000107993 /* The Measure of A Property Challenge | The Legal Geeks.pdf in Resources */,
+				F8E3464525B5CF0200107993 /* LICENSE.txt in Resources */,
+				F8E3460C25B4F8C300107993 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F827B4A42602AF45002355EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F827B4C92602B319002355EE /* TokenizedString.swift in Sources */,
+				F827B4AB2602AF45002355EE /* legalbookwormTests.swift in Sources */,
+				F827B4CC2602B339002355EE /* Vocabulary.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8E345FE25B4F8C200107993 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8E3460825B4F8C300107993 /* PDF.swift in Sources */,
+				F8E3463A25B5163C00107993 /* DistilBertOutput.swift in Sources */,
+				F8E3463925B5163C00107993 /* DistilBert.swift in Sources */,
+				F8E3463625B5163C00107993 /* Vocabulary.swift in Sources */,
+				F8E3463B25B5163C00107993 /* DistilBertInput.swift in Sources */,
+				F8E3460625B4F8C200107993 /* legalbookwormApp.swift in Sources */,
+				F8C1D39D25B5DEBE00559961 /* PdfViewer.swift in Sources */,
+				F8C1D39C25B5DEBE00559961 /* PDFViewRepresentable.swift in Sources */,
+				F8E3463525B5163C00107993 /* distilbert-qa.mlmodel in Sources */,
+				F8E3463825B5163C00107993 /* TokenizedString.swift in Sources */,
+				F8E3460A25B4F8C300107993 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F827B4AE2602AF46002355EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8E3460125B4F8C200107993 /* legalbookworm */;
+			targetProxy = F827B4AD2602AF46002355EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F827B4AF2602AF46002355EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJFD7E2FW9;
+				INFOPLIST_FILE = legalbookwormTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.latent-space-solutions.legalbookwormTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/legalbookworm.app/legalbookworm";
+			};
+			name = Debug;
+		};
+		F827B4B02602AF46002355EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJFD7E2FW9;
+				INFOPLIST_FILE = legalbookwormTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.latent-space-solutions.legalbookwormTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/legalbookworm.app/legalbookworm";
+			};
+			name = Release;
+		};
+		F8E3461125B4F8C300107993 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F8E3461225B4F8C300107993 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F8E3461425B4F8C300107993 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = legalbookworm/legalbookworm.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"legalbookworm/Preview Content\"";
+				DEVELOPMENT_TEAM = XJFD7E2FW9;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = legalbookworm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.latent-space-solutions.legalbookworm";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F8E3461525B4F8C300107993 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = legalbookworm/legalbookworm.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"legalbookworm/Preview Content\"";
+				DEVELOPMENT_TEAM = XJFD7E2FW9;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = legalbookworm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.latent-space-solutions.legalbookworm";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F827B4B12602AF46002355EE /* Build configuration list for PBXNativeTarget "legalbookwormTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F827B4AF2602AF46002355EE /* Debug */,
+				F827B4B02602AF46002355EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8E345FD25B4F8C200107993 /* Build configuration list for PBXProject "legalbookworm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8E3461125B4F8C300107993 /* Debug */,
+				F8E3461225B4F8C300107993 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8E3461325B4F8C300107993 /* Build configuration list for PBXNativeTarget "legalbookworm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8E3461425B4F8C300107993 /* Debug */,
+				F8E3461525B4F8C300107993 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F8E345FA25B4F8C200107993 /* Project object */;
+}
