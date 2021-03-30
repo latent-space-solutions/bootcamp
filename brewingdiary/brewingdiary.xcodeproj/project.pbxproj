@@ -325,7 +325,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6BAJ7UPUP3;
+				DEVELOPMENT_TEAM = XJFD7E2FW9;
 				INFOPLIST_FILE = brewingdiaryTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -346,7 +346,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6BAJ7UPUP3;
+				DEVELOPMENT_TEAM = XJFD7E2FW9;
 				INFOPLIST_FILE = brewingdiaryTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
